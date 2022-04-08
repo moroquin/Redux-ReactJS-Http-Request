@@ -1,0 +1,17 @@
+.item{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.description{
+    font-size: large;
+    font-style: italic;
+    color: blue;
+}
+
+.list{
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+}
+
