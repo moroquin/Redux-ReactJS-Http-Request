@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Article.module.css'
+//import { ArticleMain } from './styles'
 
 export const Article = (props) => {
   return (
@@ -8,3 +9,9 @@ export const Article = (props) => {
     </article>
   )
 }
+
+/*
+<ArticleMain >
+        {props.children}
+    </ArticleMain>
+    */

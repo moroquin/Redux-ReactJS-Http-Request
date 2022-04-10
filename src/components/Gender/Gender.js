@@ -1,6 +1,7 @@
 import React from 'react'
 import { Article } from '../UI/Article'
 import classes from './Gender.module.css'
+import { Description, Item, Li } from './styles'
 
 //https://api.genderize.io/?name=oliver
 export const Gender = () => {
@@ -8,18 +9,18 @@ export const Gender = () => {
         <Article>
             <h2>name</h2>
             <ul className={classes.list}>
-                <li>
-                    <p className={classes.item}>Gender:</p>
-                    <p className={classes.description}>Male</p>
-                </li>
-                <li>
-                    <p className={classes.item}>Probability</p>
-                    <p className={classes.description}>95%</p>
-                </li>
-                <li>
-                    <p className={classes.item}>Count</p>
-                    <p className={classes.description}>95</p>
-                </li>
+                <Li>
+                    <Item className={classes.item}>Gender:</Item>
+                    <Description className={classes.description}>Male</Description>
+                </Li>
+                <Li>
+                    <Item className={classes.item}>Probability</Item>
+                    <Description className={classes.description}>95%</Description>
+                </Li>
+                <Li>
+                    <Item className={classes.item}>Count</Item>
+                    <Description className={classes.description}>95</Description>
+                </Li>
             </ul>
         </Article>
     )

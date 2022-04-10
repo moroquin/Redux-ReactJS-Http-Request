@@ -1,16 +1,21 @@
-.comment{
+.comment {
     font-style: oblique;
     font-size: x-small;
     color: blue;
 }
 
-.button{
-    display: inline-block;
+.submit {
+    display: inline - block;
     margin: 0.5rem;
+    color: gray;
     opacity: 0.7;
+    font-style: italic;
     background-color: rgb(255, 255, 255);
 }
 
-.button:hover {
+.submit:hover {
     opacity: 1;
+    color: black;
+    font-weight: bold;
+    font-style: normal;
 }
