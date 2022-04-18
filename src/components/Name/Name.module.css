@@ -1,21 +1,28 @@
 .comment {
-    font-style: oblique;
-    font-size: x-small;
-    color: blue;
+  font-style: oblique;
+  font-size: x-small;
+  color: blue;
+}
+
+.inputName{
+    width: 60%;
 }
 
 .submit {
-    display: inline - block;
-    margin: 0.5rem;
-    color: gray;
-    opacity: 0.7;
-    font-style: italic;
-    background-color: rgb(255, 255, 255);
+  border-radius: 70px;
+  background: linear-gradient(145deg, #d5d5d5, #acaaaa);
+  box-shadow: 37px 37px 73px #bababa, -37px -37px 73px #ffffff;
+
+  display: inline - block;
+  margin: 0.5rem;
+
+  opacity: 0.6;
+  font-style: italic;
 }
 
 .submit:hover {
-    opacity: 1;
-    color: black;
-    font-weight: bold;
-    font-style: normal;
+  opacity: 1;
+  color: black;
+  font-weight: bold;
+  font-style: normal;
 }

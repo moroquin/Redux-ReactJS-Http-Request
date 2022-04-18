@@ -1,22 +1,56 @@
-import React from 'react'
-import { Article } from '../UI/Article'
-import { Comment, Submit } from './styles'
-//import classes from './Name.module.css'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { Article } from "../UI/Article";
+import classes from "./Name.module.css";
+import { genderActions } from "../../store/gender-slice";
 
 export const Name = () => {
+  const dispatch = useDispatch();
+
+  const formSubmissionHandler = (event) => {
+    event.preventDefault();
+    const getData = async (name) => {
+      const response = await fetch("https://api.genderize.io/?name=" + name);
+      if (!response.ok) {
+        genderActions.clear();
+        //error
+        return;
+      }
+      const responseData = await response.json();
+      dispatch(
+        genderActions.setgender({
+          name: name,
+          gender: responseData.gender,
+          probability: responseData.probability,
+          count: responseData.count,
+        })
+      );
+    };
+    getData(event.target[0].value);
+  };
+
   return (
-    <Article >
+    <Article>
       <h2>NAME</h2>
-      <Comment >Insert the name to verify the gender</Comment>
-      <form>
-        <label htmlFor='gname'></label>
-        <input type='text' id='gname' name='gname'></input>
-        <Submit type='submit' value='check' />
+      <p className={classes.comment}>Insert the name to verify the gender</p>
+      <form onSubmit={formSubmissionHandler}>
+        <label>
+          Name:
+          <input
+            type="text"
+            id="gname"
+            name="gname"
+            className={classes.inputName}
+          />
+        </label>
+        <br />
+        <input type="submit" value="check" className={classes.submit} />
       </form>
     </Article>
-  )
-}
+  );
+};
 
+//import { Comment, Submit } from "./styles";
 /*
 <Comment >Insert the name to verify the gender</Comment>
         <form>

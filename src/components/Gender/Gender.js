@@ -1,27 +1,30 @@
-import React from 'react'
-import { Article } from '../UI/Article'
-import classes from './Gender.module.css'
-import { Description, Item, Li } from './styles'
+import React from "react";
+import { useSelector } from "react-redux";
+import { Article } from "../UI/Article";
+import classes from "./Gender.module.css";
 
-//https://api.genderize.io/?name=oliver
 export const Gender = () => {
-    return (
-        <Article>
-            <h2>name</h2>
-            <ul className={classes.list}>
-                <Li>
-                    <Item className={classes.item}>Gender:</Item>
-                    <Description className={classes.description}>Male</Description>
-                </Li>
-                <Li>
-                    <Item className={classes.item}>Probability</Item>
-                    <Description className={classes.description}>95%</Description>
-                </Li>
-                <Li>
-                    <Item className={classes.item}>Count</Item>
-                    <Description className={classes.description}>95</Description>
-                </Li>
-            </ul>
-        </Article>
-    )
-}
+  const genderData = useSelector((state) => state.gender.data);
+
+  return (
+    <Article>
+      <h2>{genderData.name}</h2>
+      <ul className={classes.list}>
+        <li className="list">
+          <p className={classes.item}>Gender:</p>
+          <p className={classes.description}>{genderData.gender}</p>
+        </li>
+        <li className="list">
+          <p className={classes.item}>Probability</p>
+          <p className={classes.description}>{genderData.probability}</p>
+        </li>
+        <li className="list">
+          <p className={classes.item}>Count</p>
+          <p className={classes.description}>{genderData.count}</p>
+        </li>
+      </ul>
+    </Article>
+  );
+};
+
+//import { Description, Item, Li } from './styles'
