@@ -1,11 +1,15 @@
+.article {
+  width: 40%;
+}
+
 .comment {
   font-style: oblique;
   font-size: x-small;
   color: blue;
 }
 
-.inputName{
-    width: 60%;
+.inputName {
+  width: 60%;
 }
 
 .submit {

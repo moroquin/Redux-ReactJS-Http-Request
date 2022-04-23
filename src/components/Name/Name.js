@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { Article } from "../UI/Article";
 import classes from "./Name.module.css";
 import { genderActions } from "../../store/gender-slice";
+import { genderlistActions } from "../../store/genderlist-slice";
 
 export const Name = () => {
   const dispatch = useDispatch();
@@ -21,16 +22,28 @@ export const Name = () => {
         genderActions.setgender({
           name: name,
           gender: responseData.gender,
-          probability: responseData.probability,
+          probability: (responseData.probability * 100).toFixed(2) + "%",
           count: responseData.count,
         })
       );
+      dispatch(
+        genderlistActions.addItem({
+          item:
+            name +
+            " ( " +
+            responseData.gender +
+            " - " +
+            (responseData.probability * 100).toFixed(2) +
+            "%)",
+        })
+      );
     };
+
     getData(event.target[0].value);
   };
 
   return (
-    <Article>
+    <Article className={classes.article}>
       <h2>NAME</h2>
       <p className={classes.comment}>Insert the name to verify the gender</p>
       <form onSubmit={formSubmissionHandler}>

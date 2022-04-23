@@ -1,9 +1,10 @@
 .main {
   margin: 0.5rem;
   padding: 0.5rem;
-  width: 40%;
+ 
   text-align: center;
   display: inline-block;
+  
 
   border-radius: 70px;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);

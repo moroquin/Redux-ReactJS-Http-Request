@@ -1,0 +1,21 @@
+.item{
+    line-height: 2.5;
+    width: 80%;
+    text-align: center;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    font-size: large;
+
+}
+
+
+
+.item:nth-child(even){
+    background: rgb(207, 203, 203);
+    opacity: 0.8;
+}
+
+.item:nth-child(odd){
+    background: rgb(231, 230, 230);
+    opacity: 0.8;
+}

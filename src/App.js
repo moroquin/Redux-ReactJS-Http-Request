@@ -1,4 +1,5 @@
 import { Gender } from "./components/Gender/Gender";
+import GenderList from "./components/GenderList/GenderList";
 import { Name } from "./components/Name/Name";
 
 function App() {
@@ -7,6 +8,9 @@ function App() {
       <section>
         <Name />
         <Gender />
+      </section>
+      <section>
+        <GenderList />
       </section>
     </main>
   );
