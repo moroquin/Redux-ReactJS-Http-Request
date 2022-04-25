@@ -1,21 +1,47 @@
-.item{
-    line-height: 2.5;
-    width: 80%;
-    text-align: center;
-    border-radius: 1.5rem;
-    font-weight: bold;
-    font-size: large;
-
+.item {
+  width: 80%;
+  height: 2rem;
+  margin: 0;
+  text-align: left;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  font-size: large;
+  
+  position: relative;
 }
 
-
-
-.item:nth-child(even){
-    background: rgb(207, 203, 203);
-    opacity: 0.8;
+.item p {
+  width: 80%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.6rem;
 }
 
-.item:nth-child(odd){
-    background: rgb(231, 230, 230);
-    opacity: 0.8;
+.item:nth-child(even) {
+  background: rgb(207, 203, 203);
+  opacity: 0.8;
+}
+
+.item:nth-child(odd) {
+  background: rgb(231, 230, 230);
+  opacity: 0.8;
+}
+
+.search_button {
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0rem;
+  right: 1rem;
+}
+
+.search_button:hover {
+  opacity: 1;
 }
