@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const genderlistSlice = createSlice({
     name: "genderlist",
     initialState:{
@@ -12,6 +11,9 @@ const genderlistSlice = createSlice({
             state.list.push({id: state.id, text: action.payload.item});
             
 
+        },
+        removeItem(state, action){
+            state.list = state.list.filter(item => item.id !== action.payload.id);
         }
     }
 });
