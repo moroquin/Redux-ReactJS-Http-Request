@@ -2,6 +2,12 @@
   width: 40%;
 }
 
+.error{
+  font-style: oblique;
+  font-size: x-small;
+  color: red;
+}
+
 .comment {
   font-style: oblique;
   font-size: x-small;
