@@ -7,10 +7,8 @@ const genderlistSlice = createSlice({
     },
     reducers:{
         addItem(state, action){
-            state.id = state.id+1;
             state.list.push({id: state.id, text: action.payload.item});
-            
-
+            state.id = state.id+1;
         },
         removeItem(state, action){
             state.list = state.list.filter(item => item.id !== action.payload.id);

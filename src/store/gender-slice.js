@@ -12,7 +12,7 @@ const genderSlice = createSlice({
       state.data.probability = "";
       state.data.count = "";
     },
-    setgender(state, action) {
+    setgender(state, action) { 
       state.data.name = action.payload.name;
       state.data.gender = action.payload.gender;
       state.data.probability = action.payload.probability;

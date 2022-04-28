@@ -9,9 +9,3 @@ export const Article = (props) => {
     </article>
   )
 }
-
-/*
-<ArticleMain >
-        {props.children}
-    </ArticleMain>
-    */
