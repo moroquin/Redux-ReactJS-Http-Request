@@ -2,6 +2,12 @@
   width: 40%;
 }
 
+.empty{
+  font-size: xx-large;
+  font-weight: bold;
+  color: rgb(173, 82, 66);
+}
+
 .item {
   font-size: medium;
   font-weight: bold;

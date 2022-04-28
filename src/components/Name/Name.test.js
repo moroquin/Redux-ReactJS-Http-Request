@@ -46,7 +46,7 @@ describe("Name component integration test", () => {
           <Name />
         </Provider>
       );
-    });
+    }); 
 
     fireEvent.click(container.querySelector('input[type="submit"]'));
     let errorItem = container.querySelector('p[class*="error"]');
@@ -97,5 +97,6 @@ describe("Name component integration test", () => {
       id: 0,
       text: "Oliver ( male - 99.00%)",
     });
+    global.fetch.mockClear()
   });
 });

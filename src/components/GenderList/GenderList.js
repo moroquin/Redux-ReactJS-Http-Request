@@ -22,9 +22,9 @@ const GenderList = () => {
   );
 
   return (
-    <Article className={classes.article}>
+    <Article  className={classes.article}>
       <h2>History of consulted names</h2>
-      <ul className={classes.list}>
+      <ul id="genderlistcomponentul" className={classes.list}>
         {genderListItems.map((item) => (
           <GenderItem
             key={item.id}

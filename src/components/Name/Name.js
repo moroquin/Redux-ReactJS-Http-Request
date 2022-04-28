@@ -68,7 +68,7 @@ export const Name = () => {
     <Article className={classes.article}>
       <h2>NAME</h2>
       <p className={classes.comment}>Insert the name to verify the gender</p>
-      <form onSubmit={formSubmissionHandler}>
+      <form  onSubmit={formSubmissionHandler}>
         <label>
           Name:
           <input
@@ -82,7 +82,7 @@ export const Name = () => {
         </label>
         {errorImput && <p className={classes.error}>Error, you must write a name.</p>}
         <br />
-        <input type="submit" value="check" className={classes.submit} />
+        <input id="namesubmitcomponent" type="submit" value="check" className={classes.submit} />
       </form>
     </Article>
   );
