@@ -10,7 +10,7 @@ import store from "../../store";
 import { Provider } from "react-redux";
 import { genderActions } from "../../store/gender-slice";
 
-describe("Gender display component tests", () => {
+describe("Gender component", () => {
   let container;
 
   beforeEach(() => {

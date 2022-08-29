@@ -1,6 +1,6 @@
 import genderSlice, { genderActions } from "./gender-slice";
 
-describe("Redux Gender-slice tests", () => {
+describe("Redux Gender-slice", () => {
   it("should return the initial state for genderActions", () => {
     expect(genderSlice.reducer(undefined, {})).toEqual({
       data: {

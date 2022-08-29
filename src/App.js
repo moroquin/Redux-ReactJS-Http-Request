@@ -13,7 +13,6 @@ function App() {
       <section>
         <GenderList />
       </section>
-      
     </main>
   );
 }
